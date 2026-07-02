@@ -51,6 +51,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 88px;
 }
 
 body {
@@ -76,6 +77,10 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+[id] {
+    scroll-margin-top: 88px;
 }
 
 /* ===========================
@@ -545,6 +550,50 @@ body {
 
 .exchange-features {
     margin-bottom: 24px;
+}
+
+.exchange-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 24px;
+}
+
+.exchange-info .info-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.exchange-info .info-row:last-child {
+    border-bottom: none;
+}
+
+.exchange-info .info-label {
+    min-width: 0;
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.exchange-info .info-value {
+    flex-shrink: 0;
+    color: var(--text-primary);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: right;
+}
+
+.exchange-info .info-value.success {
+    color: var(--success);
+}
+
+.exchange-info .info-value.error {
+    color: #ef4444;
 }
 
 .feature-item {
@@ -1456,6 +1505,7 @@ body {
     }
     
     .exchanges-grid,
+    .community-grid,
     .app-grid,
     .referral-grid {
         grid-template-columns: 1fr;
@@ -1499,8 +1549,197 @@ body {
     .community-card {
         padding: 24px;
     }
+
+    .exchange-info .info-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .exchange-info .info-value {
+        text-align: left;
+    }
     
     .payback-rate {
         font-size: 40px;
+    }
+}
+
+/* ===========================
+   Referral Guide Mobile Fixes
+   =========================== */
+
+.guide-container,
+.guide-section,
+.info-box,
+.warning-banner,
+.alert-box,
+.success-box,
+.danger-box,
+.note-box-content,
+.steps-list,
+.step-item,
+.step-description {
+    min-width: 0;
+}
+
+.guide-container .step-item {
+    display: block !important;
+}
+
+.step-title,
+.step-description,
+.note-box-content,
+.alert-box-content {
+    overflow-wrap: anywhere;
+}
+
+.step-title {
+    white-space: normal !important;
+}
+
+.step-description a,
+.step-description code,
+.note-box-content code,
+.alert-box-content code {
+    max-width: 100% !important;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+}
+
+.step-description code,
+.note-box-content code,
+.alert-box-content code {
+    white-space: pre-wrap !important;
+    word-break: break-word;
+}
+
+.step-description a {
+    white-space: normal !important;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .guide-container {
+        margin: 100px auto 60px !important;
+        padding: 0 16px !important;
+    }
+
+    .guide-header {
+        margin-bottom: 40px !important;
+    }
+
+    .guide-logo {
+        width: 100px !important;
+        height: 100px !important;
+        padding: 16px !important;
+    }
+
+    .guide-title {
+        font-size: 28px !important;
+        line-height: 1.3 !important;
+        word-break: keep-all;
+    }
+
+    .guide-subtitle {
+        font-size: 15px !important;
+        line-height: 1.7 !important;
+        word-break: keep-all;
+    }
+
+    .warning-banner,
+    .info-box,
+    .guide-section,
+    .alert-box,
+    .success-box,
+    .danger-box {
+        padding: 22px !important;
+        border-radius: 14px !important;
+    }
+
+    .warning-banner i {
+        font-size: 40px !important;
+    }
+
+    .warning-banner h3,
+    .info-box-title,
+    .guide-section-title,
+    .method-title,
+    .alert-box-title,
+    .success-box-title,
+    .danger-box-title {
+        align-items: flex-start !important;
+        font-size: 22px !important;
+        line-height: 1.35 !important;
+        gap: 10px !important;
+        word-break: keep-all;
+    }
+
+    .method-title {
+        flex-wrap: wrap;
+    }
+
+    .info-row {
+        align-items: flex-start !important;
+        gap: 10px !important;
+    }
+
+    .info-label {
+        min-width: 0;
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+    }
+
+    .info-value {
+        flex-shrink: 0;
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+        text-align: right;
+    }
+
+    .step-item {
+        padding-left: 0 !important;
+        padding-top: 52px !important;
+    }
+
+    .step-item::before {
+        left: 0 !important;
+    }
+
+    .step-title {
+        font-size: 19px !important;
+        line-height: 1.45 !important;
+    }
+
+    .step-description,
+    .note-box-content,
+    .alert-box-content {
+        font-size: 15px !important;
+        line-height: 1.75 !important;
+    }
+
+    .step-description a {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 100% !important;
+        padding: 14px 16px !important;
+        line-height: 1.5 !important;
+    }
+
+    .step-description code {
+        display: block !important;
+        width: 100% !important;
+        padding: 10px 12px !important;
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+
+    .btn-large,
+    .btn-back {
+        width: 100% !important;
+        min-width: 0 !important;
+        justify-content: center;
+        text-align: center;
     }
 }
