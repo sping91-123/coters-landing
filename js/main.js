@@ -192,74 +192,11 @@ if (videoThumbnail) {
     videoThumbnail.style.cursor = 'pointer';
 }
 
-// ===========================
-// Stat Counter Animation
-// ===========================
-
-const animateCounter = (element, target, suffix = '') => {
-    const duration = 2000; // 2 seconds
-    const steps = 60;
-    const increment = target / steps;
-    let current = 0;
-    
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            element.textContent = target + suffix;
-            clearInterval(timer);
-        } else {
-            element.textContent = Math.floor(current) + suffix;
-        }
-    }, duration / steps);
-};
-
-// Observe hero stats for counter animation
+// Keep hero stats static so key numbers are immediately accurate.
 const heroStats = document.querySelector('.hero-stats');
 if (heroStats) {
-    const statsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !entry.target.dataset.animated) {
-                entry.target.dataset.animated = 'true';
-                
-                // Animate stat numbers
-                const statNumbers = entry.target.querySelectorAll('.stat-number');
-                statNumbers.forEach(stat => {
-                    const text = stat.textContent;
-                    if (text.includes('%')) {
-                        const value = parseInt(text);
-                        animateCounter(stat, value, '%');
-                    } else if (text.includes('K+')) {
-                        const value = parseFloat(text);
-                        stat.textContent = '0K+';
-                        animateCounterFloat(stat, value, 'K+');
-                    } else if (text.includes('+')) {
-                        const value = parseInt(text);
-                        animateCounter(stat, value, '+');
-                    }
-                });
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    statsObserver.observe(heroStats);
+    heroStats.dataset.animated = 'true';
 }
-
-const animateCounterFloat = (element, target, suffix = '') => {
-    const duration = 2000;
-    const steps = 60;
-    const increment = target / steps;
-    let current = 0;
-    
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            element.textContent = target + suffix;
-            clearInterval(timer);
-        } else {
-            element.textContent = current.toFixed(1) + suffix;
-        }
-    }, duration / steps);
-};
 
 // ===========================
 // Logo Click - Scroll to Top

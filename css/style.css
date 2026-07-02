@@ -4,11 +4,11 @@
 
 :root {
     /* Colors - Dark Mode with Yellow Accent */
-    --bg-primary: #0a0e1a;
-    --bg-secondary: #111827;
-    --bg-tertiary: #1a1f35;
-    --bg-card: #1e2642;
-    --bg-card-hover: #252d4a;
+    --bg-primary: #070b13;
+    --bg-secondary: #0c1220;
+    --bg-tertiary: #111827;
+    --bg-card: #151d2e;
+    --bg-card-hover: #1b263a;
     
     /* Text Colors */
     --text-primary: #ffffff;
@@ -16,9 +16,9 @@
     --text-tertiary: #71717a;
     
     /* Yellow Accent Colors (코털스 컬러) */
-    --accent-primary: #fbbf24;
-    --accent-secondary: #fcd34d;
-    --accent-gradient: linear-gradient(135deg, #fbbf24 0%, #fcd34d 100%);
+    --accent-primary: #f5b82e;
+    --accent-secondary: #f8d36b;
+    --accent-gradient: linear-gradient(135deg, #f5b82e 0%, #f8d36b 100%);
     
     /* Success & Highlight */
     --success: #10b981;
@@ -26,14 +26,14 @@
     --info: #3b82f6;
     
     /* Border & Shadow */
-    --border-color: #2d3548;
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
-    --shadow-glow: 0 0 20px rgba(251, 191, 36, 0.3);
+    --border-color: rgba(148, 163, 184, 0.16);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.24);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.28);
+    --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.34);
+    --shadow-glow: 0 12px 30px rgba(245, 184, 46, 0.22);
     
     /* Spacing */
-    --container-max-width: 1280px;
+    --container-max-width: 1120px;
     --section-padding: 100px;
     --section-padding-mobile: 60px;
     
@@ -1562,6 +1562,398 @@ body {
     
     .payback-rate {
         font-size: 40px;
+    }
+}
+
+/* ===========================
+   Modern Landing Refresh
+   =========================== */
+
+body {
+    background:
+        linear-gradient(180deg, #070b13 0%, #080d18 42%, #070b13 100%);
+}
+
+.header {
+    background: rgba(7, 11, 19, 0.88);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.header-content {
+    height: 72px;
+}
+
+.logo-image,
+.footer-logo-image {
+    border-color: rgba(245, 184, 46, 0.7);
+}
+
+.nav {
+    gap: 18px;
+}
+
+.nav-link {
+    font-size: 13px;
+}
+
+.hero {
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    padding: 136px 0 72px;
+    background:
+        linear-gradient(180deg, rgba(245, 184, 46, 0.08) 0%, rgba(7, 11, 19, 0) 42%),
+        linear-gradient(135deg, rgba(34, 158, 217, 0.08) 0%, rgba(7, 11, 19, 0) 38%);
+}
+
+.hero-background {
+    background:
+        linear-gradient(90deg, rgba(245, 184, 46, 0.08), transparent 32%, rgba(34, 158, 217, 0.06));
+    opacity: 0.8;
+}
+
+.hero-content {
+    max-width: 920px;
+}
+
+.hero-badge,
+.section-badge {
+    border-radius: 999px;
+    background: rgba(245, 184, 46, 0.08);
+    border-color: rgba(245, 184, 46, 0.34);
+    box-shadow: none;
+}
+
+.hero-title {
+    font-size: 88px;
+    letter-spacing: 0;
+    margin-bottom: 18px;
+}
+
+.hero-description {
+    max-width: 680px;
+    margin: 0 auto 28px;
+    color: #cbd5e1;
+}
+
+.hero-buttons {
+    margin-bottom: 22px;
+}
+
+.btn-hero-primary,
+.btn-hero-secondary,
+.exchange-btn,
+.btn-premium,
+.btn-membership,
+.btn-membership-large,
+.btn-telegram,
+.btn-secondary,
+.btn-app-download,
+.btn-referral {
+    border-radius: 8px;
+}
+
+.btn-hero-primary,
+.exchange-btn.primary,
+.btn-app-download {
+    box-shadow: 0 10px 24px rgba(245, 184, 46, 0.18);
+}
+
+.btn-hero-secondary {
+    background: rgba(21, 29, 46, 0.72);
+    border-color: rgba(148, 163, 184, 0.2);
+}
+
+.hero-proof-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 auto 18px;
+    color: #d1d5db;
+    font-size: 14px;
+}
+
+.hero-proof-row span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 34px;
+    padding: 7px 12px;
+    background: rgba(15, 23, 42, 0.68);
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    border-radius: 999px;
+}
+
+.hero-proof-row i {
+    color: var(--success);
+}
+
+.hero-exchange-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 0 auto 28px;
+}
+
+.hero-exchange-strip img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    padding: 8px;
+    background: rgba(21, 29, 46, 0.84);
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    border-radius: 8px;
+}
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 22px 28px;
+    background: rgba(15, 23, 42, 0.72);
+    border-color: rgba(148, 163, 184, 0.16);
+    border-radius: 8px;
+    box-shadow: none;
+}
+
+.hero-stats .stat-divider {
+    display: none;
+}
+
+.hero-stats .stat-item:not(:first-child) {
+    border-left: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.stat-number {
+    font-size: 32px;
+}
+
+.section-header {
+    max-width: 720px;
+    margin: 0 auto 46px;
+}
+
+.section-title,
+.premium-title {
+    letter-spacing: 0;
+}
+
+.exchanges,
+.community,
+.app-download {
+    background: #0c1220;
+}
+
+.exchanges-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.exchange-card,
+.benefit-item,
+.premium-card,
+.membership-card,
+.community-card,
+.events-placeholder,
+.app-card,
+.referral-card {
+    border-radius: 8px;
+    box-shadow: none;
+}
+
+.exchange-card {
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+    background: rgba(21, 29, 46, 0.88);
+    border-color: rgba(148, 163, 184, 0.14);
+}
+
+.exchange-card::before {
+    transform: scaleX(1);
+    opacity: 0.75;
+}
+
+.exchange-card:hover,
+.app-card:hover,
+.community-card:hover,
+.referral-card:hover {
+    transform: translateY(-4px);
+}
+
+.exchange-header {
+    margin-bottom: 18px;
+}
+
+.exchange-logo {
+    width: 46px;
+    height: 46px;
+    border-radius: 8px;
+    background: #0f172a;
+}
+
+.exchange-name {
+    font-size: 21px;
+}
+
+.exchange-payback {
+    padding: 0 0 16px;
+    background: transparent;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+    border-radius: 0;
+    text-align: left;
+}
+
+.payback-rate {
+    font-size: 42px;
+    line-height: 1.1;
+}
+
+.exchange-info {
+    flex: 1;
+    margin: 2px 0 20px;
+}
+
+.exchange-info .info-row {
+    padding: 9px 0;
+}
+
+.exchange-buttons {
+    margin-top: auto;
+}
+
+.premium-content {
+    gap: 48px;
+}
+
+.premium-card {
+    border-width: 1px;
+    border-color: rgba(245, 184, 46, 0.5);
+}
+
+.benefit-item {
+    padding: 18px;
+}
+
+.membership-card {
+    padding: 42px;
+    background:
+        linear-gradient(90deg, rgba(255, 0, 0, 0.12), transparent 45%),
+        var(--bg-card);
+}
+
+.community-grid {
+    gap: 18px;
+}
+
+.community-card {
+    padding: 32px;
+}
+
+.events-placeholder {
+    padding: 52px 28px;
+    border-style: solid;
+}
+
+.app-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+}
+
+.app-card {
+    padding: 24px 18px;
+}
+
+.footer {
+    background: #070b13;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        height: 72px;
+    }
+
+    .mobile-menu {
+        top: 72px;
+        max-height: calc(100vh - 72px);
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 106px 0 32px;
+    }
+
+    .hero-title {
+        font-size: 52px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-proof-row {
+        justify-content: flex-start;
+    }
+
+    .hero-exchange-strip {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 4px;
+    }
+
+    .hero-stats {
+        display: none;
+    }
+
+    .section-header {
+        margin-bottom: 34px;
+    }
+
+    .membership-card {
+        padding: 30px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 44px;
+    }
+
+    .hero {
+        padding: 98px 0 28px;
+    }
+
+    .hero-badge {
+        font-size: 13px;
+        line-height: 1.5;
+        border-radius: 8px;
+    }
+
+    .hero-exchange-strip {
+        display: none;
+    }
+
+    .hero-proof-row {
+        display: none;
+    }
+
+    .hero-buttons {
+        gap: 10px;
+    }
+
+    .exchange-card,
+    .premium-card,
+    .community-card {
+        padding: 20px;
+    }
+
+    .payback-rate {
+        font-size: 36px;
     }
 }
 
