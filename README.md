@@ -11,11 +11,12 @@ Wedom 스타일의 현대적이고 세련된 암호화폐 거래소 추천 및 �
 ## 🌟 주요 기능
 
 ### 1. 거래소 비교 및 가입
-- **5개 주요 거래소** 정보 제공
+- **6개 주요 거래소** 정보 제공
   - BingX (45% 페이백) ⭐ BEST
   - Gate.io (50% 페이백) ⭐ BEST
   - LBank (30% 페이백)
   - OKX (20% 페이백)
+  - Bybit (20% 페이백)
   - Bitget (20% 페이백)
 
 - **상세 정보 표시**
@@ -82,6 +83,7 @@ Wedom 스타일의 현대적이고 세련된 암호화폐 거래소 추천 및 �
 │   ├── gate-logo.png         # Gate.io 로고
 │   ├── lbank-logo-new.png    # LBank 로고
 │   ├── okx-logo.svg          # OKX 로고
+│   ├── bybit-logo.jpg        # Bybit 로고
 │   └── bitget-logo.png       # Bitget 로고
 ├── README.md                 # 프로젝트 문서
 └── 수정가이드.md             # 수정 가이드 문서
@@ -114,7 +116,7 @@ Wedom 스타일의 현대적이고 세련된 암호화폐 거래소 추천 및 �
 - **Gate.io**: https://www.gate.com/share/COTERS
 - **LBank**: https://lbank.com/ref/COTERS
 - **OKX**: https://www.okx.com/join/COTERS
-- **Bitget**: https://partner.bitget.com/bg/COTERS20
+- **Bybit**: https://partner.bybit.com/b/COTERS
 - **Bitget**: https://partner.bitget.com/bg/COTERS20
 
 ### 커뮤니티
@@ -134,6 +136,7 @@ Wedom 스타일의 현대적이고 세련된 암호화폐 거래소 추천 및 �
 | Gate.io | 50% | 0.01% | 0.025% | ✅ 가능 |
 | LBank | 30% | 0.014% | 0.042% | ✅ 가능 |
 | OKX | 20% | 0.016% | 0.04% | ⚠️ 제한적 |
+| Bybit | 20% | 0.016% | 0.044% | ✅ 가능 |
 | Bitget | 20% | 0.016% | 0.048% | ✅ 가능 |
 
 *수수료는 페이백 적용 후 실질 수수료입니다.
